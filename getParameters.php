@@ -3,8 +3,9 @@
         
         $sn1 = $_GET["a"];
         $sn2 = $_GET["b"];
-        
-        $text = "a=1" . $sn1 . " b=1" . $sn2;
+        a = 1;
+        b = 2;
+        $text = "a=" . $sn1 . " b=" . $sn2;
         $sum = $sn1 + $sn2;
         
         echo $text;
