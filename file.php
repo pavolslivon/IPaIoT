@@ -1,6 +1,5 @@
 <?php
-# Include script to make a database connection
-include("connect.php");
+
 # Check if input fileds are empty
 if(empty($_GET['name']) && empty($_GET['email'])){
     # If the fields are empty, display a message to the user
