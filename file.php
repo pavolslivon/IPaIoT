@@ -1,22 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>How to put PHP in HTML - foreach Example</title>
+    <title>How to put PHP in HTML - Simple Example</title>
 </head>
+
 <body>
-<?php
-$employees = array(‘John’, ‘Michelle’, ‘Mari’, ‘Luke’, ‘Nellie’);
-$total = count($employees);
-?>
-<h1>List of Employees</h1>
-<ul>
-<?php
-$i = 0;
-?>
-<?php while ($i < $total) { ?>
-<li><?php echo $employees[$i] ?></li>
-<?php  ++$i ?>
-<?php }  ?>
-</ul>
+    <h1><?php echo "This message is from server side." ?></h1>
 </body>
+
 </html>
