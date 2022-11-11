@@ -32,7 +32,7 @@
         return $data;
     }
     ?>
-    <h2>PHP Form Validation Example</h2>
+    <h2>PHP Form Validation Example232332</h2>
     <p><span class="error">* required field</span></p>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         Name: <input type="text" name="name" value="<?php echo $name; ?>">
@@ -53,14 +53,11 @@
         Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment; ?></textarea>
         <br><br>
         Gender:
-        <input type="radio" name="gender" <?php if (isset($gender) && $gender == "female")
-            echo "checked"; ?>
+        <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked"; ?>
         value="female">Female
-        <input type="radio" name="gender" <?php if (isset($gender) && $gender == "male")
-            echo "checked"; ?>
+        <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked"; ?>
         value="male">Male
-        <input type="radio" name="gender" <?php if (isset($gender) && $gender == "other")
-            echo "checked"; ?>
+        <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked"; ?>
         value="other">Other
         <span class="error">*
             <?php echo $genderErr; ?>
