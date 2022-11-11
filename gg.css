@@ -162,11 +162,15 @@ html {
   }
   
   input[type = submit] {
-    background-color: orange;
-    border: none;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
     text-decoration: none;
-    color: white;
-    padding: 20px 20px;
-    margin: 20px 20px;
-    cursor: pointer;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
  }
