@@ -8,19 +8,11 @@
 <body>
     <?php
     // define variables and set to empty values
-    $nameErr = $emailErr = $genderErr = $websiteErr = "";
-    $name = $email = $gender = $comment = $website = "";
+    $username = $email = $name = $comment = $website = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (empty($_POST["name"])) {
-            $nameErr = "Name is required";
-        } else {
-            $name = test_input($_POST["name"]);
-            // check if name only contains letters and whitespace
-            if (!preg_match("/^[a-zA-Z-' ]*$/", $name)) {
-                $nameErr = "Only letters and white space allowed";
-            }
-        }
+        $username = test_input($_POST["username"]);
+        $name = test_input($_POST["name"]);
     }
 
     function test_input($data)
@@ -35,11 +27,15 @@
         <h2>Login</h2>
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
             <div class="user-box">
-                <input type="text" name="name" required="" value="<?php echo $name; ?>">
+                <input type="text" name="username" required="" value="<?php echo $username; ?>">
                 <label>Username</label>
             </div>
             <div class="user-box">
                 <input type="password" name="" required="">
+                <label>Password</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="name" required="" value="<?php echo $name; ?>">
                 <label>Password</label>
             </div>
             <input type="submit" value="Submit">
@@ -49,6 +45,8 @@
     <?php
     echo "<h2>Your Input:</h2>";
     echo $name;
+    echo "<br>";
+    echo $username;
     echo "<br>";
     ?>
 
