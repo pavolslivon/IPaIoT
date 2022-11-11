@@ -174,7 +174,9 @@ html {
     overflow: hidden;
     transition: .5s;
     margin-top: 40px;
-    letter-spacing: 4px
+    letter-spacing: 4px;
+    border: none;
+    outline: none;
  }
     input[type = submit]:hover {
     background: #03e9f4;
