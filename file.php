@@ -14,7 +14,7 @@
         <h2>Login</h2>
         <form>
             <div class="user-box">
-                Name: <input type="text" name="" required="" <?php echo $name; ?>">
+                <input type="text" name="" required="" <?php echo $name; ?>">
                 <label>Username</label>
             </div>
             <div class="user-box">
