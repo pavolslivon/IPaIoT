@@ -12,6 +12,18 @@
     $nameErr = $emailErr = $genderErr = $websiteErr = "";
     $name = $email = $gender = $comment = $website = "";
 
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (empty($_POST["name"])) {
+            $nameErr = "Name is required";
+        } else {
+            $name = test_input($_POST["name"]);
+            // check if name only contains letters and whitespace
+            if (!preg_match("/^[a-zA-Z-' ]*$/", $name)) {
+                $nameErr = "Only letters and white space allowed";
+            }
+        }
+    }
+
     function test_input($data)
     {
         $data = trim($data);
@@ -41,13 +53,13 @@
         Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment; ?></textarea>
         <br><br>
         Gender:
-        <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female")
+        <input type="radio" name="gender" <?php if (isset($gender) && $gender == "female")
             echo "checked"; ?>
         value="female">Female
-        <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male")
+        <input type="radio" name="gender" <?php if (isset($gender) && $gender == "male")
             echo "checked"; ?>
         value="male">Male
-        <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other")
+        <input type="radio" name="gender" <?php if (isset($gender) && $gender == "other")
             echo "checked"; ?>
         value="other">Other
         <span class="error">*
