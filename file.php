@@ -35,19 +35,14 @@
         <h2>Login</h2>
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
             <div class="user-box">
-                <input type="text" name="" required="" <?php echo $name; ?>">
+                <input type="text" name="name" value=" <?php echo $name; ?>">
                 <label>Username</label>
             </div>
             <div class="user-box">
                 <input type="password" name="" required="">
                 <label>Password</label>
             </div>
-            <a href="#">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Submit
+            <a <input type="submit" name="submit" value="Submit">
             </a>
         </form>
     </div>
