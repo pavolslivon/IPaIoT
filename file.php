@@ -42,10 +42,15 @@
                 <input type="password" name="" required="">
                 <label>Password</label>
             </div>
-            <input type="submit" name="submit" value="Submit">
+            <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Submit
+            </a>
         </form>
     </div>
-    </form>
 
     <?php
     echo "<h2>Your Input:123</h2>";
