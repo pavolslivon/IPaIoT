@@ -35,7 +35,7 @@
         <h2>Login</h2>
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
             <div class="user-box">
-                <input type="text" name="" required="" value=" <?php echo $name; ?>">
+                <input type="text" name="name" required="" value=" <?php echo $name; ?>">
                 <label>Username</label>
             </div>
             <div class="user-box">
@@ -50,7 +50,7 @@
     </div>
 
     <?php
-    echo "<h2>Your Input1:</h2>";
+    echo "<h2>Your Input12:</h2>";
     echo $name;
     echo "<br>";
     ?>
