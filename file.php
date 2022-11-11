@@ -43,7 +43,8 @@
                 <label>Password</label>
             </div>
             <a>
-                <input type="submit" name="submit" value="Submit">
+                <input type="submit" name="" value="Submit">
+                Submit
             </a>
         </form>
     </div>
