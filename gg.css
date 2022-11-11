@@ -166,9 +166,8 @@ html {
     display: inline-block;
     padding: 10px 20px;
     color: #03e9f4;
-    transform: translate(-50%, -50%);
-    background: rgba(0,0,0,.5);
-    outline: none;
+    background: rgba(15,24,35,142);
+    outline-width: 0mm;
     font-size: 16px;
     text-decoration: none;
     text-transform: uppercase;
