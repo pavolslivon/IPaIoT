@@ -36,7 +36,7 @@
             </div>
             <div class="user-box">
                 <input type="text" name="name" required="" value="<?php echo $name; ?>">
-                <label>Password</label>
+                <label>Name</label>
             </div>
             <input type="submit" value="Submit">
         </form>
