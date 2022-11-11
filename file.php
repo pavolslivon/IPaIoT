@@ -27,11 +27,6 @@
         <h2>Login</h2>
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
             <div class="user-box">
-                <input type="text" name="firstname" required="" value="<?php echo $firstname; ?>"> <input type="text"
-                    name="lastname" required="" value="<?php echo $name; ?>">
-                <label>First Name</label>
-            </div>
-            <div class="user-box">
                 <input type="text" name="username" required="" value="<?php echo $username; ?>">
                 <label>Username</label>
             </div>
