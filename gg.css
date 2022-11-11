@@ -12,7 +12,7 @@ html {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 800px;
+    width: 400px;
     padding: 40px;
     transform: translate(-50%, -50%);
     background: rgba(0,0,0,.5);
@@ -68,6 +68,7 @@ html {
     padding: 10px 20px;
     color: #03e9f4;
     background: transparent;
+    outline-width: 0mm;
     font-size: 16px;
     text-decoration: none;
     text-transform: uppercase;
