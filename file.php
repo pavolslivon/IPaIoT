@@ -31,22 +31,21 @@
         return $data;
     }
     ?>
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-        <div class="login-box">
-            <h2>Login</h2>
-            <form>
-                <div class="user-box">
-                    <input type="text" name="" required="" <?php echo $name; ?>">
-                    <label>Username</label>
-                </div>
-                <div class="user-box">
-                    <input type="password" name="" required="">
-                    <label>Password</label>
-                </div>
-                <input type="submit" name="submit" value="Submit">
-                </a>
-            </form>
-        </div>
+    <div class="login-box">
+        <h2>Login</h2>
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+            <div class="user-box">
+                <input type="text" name="" required="" <?php echo $name; ?>">
+                <label>Username</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="" required="">
+                <label>Password</label>
+            </div>
+            <input type="submit" name="submit" value="Submit">
+            </a>
+        </form>
+    </div>
     </form>
 
     <?php
