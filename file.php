@@ -21,12 +21,7 @@
                 <input type="password" name="" required="">
                 <label>Password</label>
             </div>
-            <a href="#">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Submit
+            <input type="submit" name="submit" value="Submit">
             </a>
         </form>
     </div>
