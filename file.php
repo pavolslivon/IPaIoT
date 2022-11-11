@@ -47,7 +47,7 @@
     </div>
 
     <?php
-    echo "<h2>Your Input12:</h2>";
+    echo "<h2>Your Input:</h2>";
     echo $name;
     echo "<br>";
     ?>
