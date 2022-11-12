@@ -9,7 +9,6 @@
     <?php
     // define variables and set to empty values
     $name = $email = $subject = $date = $message = $link = "";
-
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = test_input($_POST["name"]);
         $email = test_input($_POST["email"]);
@@ -51,9 +50,9 @@
             </div>
             <div class="label_s">
                 <div style="height: 25px; display: block;"></div>
-                <label>Deadline</label>
                 <div class="user-box">
-                    <input type="date" name="date" required="" value="<?php echo $date; ?>">
+                    <input type="date" name="date" required="" value="<?php echo date('Y-m-d'); ?>">
+                    <label>Deadline</label>
                 </div>
             </div>
             <div class="user-box">

@@ -14,7 +14,7 @@ html {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 400px;
+    width: 20%;
     padding: 40px;
     transform: translate(-50%, -50%);
     background: rgba(0,0,0,.4);
@@ -77,7 +77,6 @@ html {
   }
   input[type = submit] {
     position: static;
-    display: inline-block;
     padding: 10px 20px;
     color: #fdd7e4;
     background: transparent;
@@ -91,15 +90,19 @@ html {
     letter-spacing: 4px;
     border: none;
     outline: none;
+    display: block;
+    margin: auto;
+    width: auto;
+    min-width: 50px;
  }
     input[type = submit]:hover {
-    background: #fdd7e4;
+    background: rgba(150,114,130,1);
     color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 5px#fdd7e4,
-                0 0 25px #7e587e,
-                0 0 50px #7e587e,
-                0 0 100px #7e587e;
+    box-shadow: 0 0 5px rgba(150,114,130,1),
+                0 0 25px rgba(150,114,130,1),
+                0 0 50px rgba(150,114,130,1),
+                0 0 100px rgba(150,114,130,1);
   }
 select {
   -webkit-appearance: none;
@@ -118,21 +121,11 @@ select {
 }
 select option {
   color: inherit;
-  background-color: #320a28;
+  background-color: rgba(150,114,130,1);
 }
 select:focus {
   outline: none;
 }
 select::-ms-expand {
   display: none;
-}
-input [type="date"] {
-  background:black url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
-}
-input [type="date"]::-webkit-inner-spin-button {
-  display: inline;
-}
-input[type="date"]::-webkit-calendar-picker-indicator {
-  opacity: 100;
-  color:black;
 }
