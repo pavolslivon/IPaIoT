@@ -1,11 +1,13 @@
+
 html {
     height: 100%;
+    resize: none;
   }
   body {
     margin:0;
     padding:0;
     font-family: sans-serif;
-    background: linear-gradient(#141e30, #243b55);
+    background:linear-gradient(to bottom right,#11d8f4,#c3505d)
   }
   
   .login-box {
@@ -15,7 +17,7 @@ html {
     width: 400px;
     padding: 40px;
     transform: translate(-50%, -50%);
-    background: rgba(0,0,0,.5);
+    background: rgba(0,0,0,.4);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
@@ -32,7 +34,7 @@ html {
     position: relative;
   }
   
-  .login-box .user-box input {
+  .login-box .user-box input, textarea{
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
@@ -42,8 +44,12 @@ html {
     border-bottom: 1px solid #fff;
     outline: none;
     background: transparent;
+    resize: none;
   }
-  .login-box .user-box label {
+  textarea{
+    height: 100px;
+  }
+  .login-box .user-box label{
     position: absolute;
     top:0;
     left: 0;
@@ -53,20 +59,27 @@ html {
     pointer-events: none;
     transition: .5s;
   }
-  
+
+  .login-box .user-box textarea:focus ~ label,
   .login-box .user-box input:focus ~ label,
   .login-box .user-box input:valid ~ label {
     top: -20px;
     left: 0;
-    color: #03e9f4;
+    color: #fdd7e4;
     font-size: 12px;
   }
-
+  .label_s label {
+    color: #fdd7e4;
+    font-size: 12px;
+    top: -10px;
+    left: 0;
+    position: relative;
+  }
   input[type = submit] {
     position: static;
     display: inline-block;
     padding: 10px 20px;
-    color: #03e9f4;
+    color: #fdd7e4;
     background: transparent;
     outline-width: 0mm;
     font-size: 16px;
@@ -80,11 +93,46 @@ html {
     outline: none;
  }
     input[type = submit]:hover {
-    background: #03e9f4;
+    background: #fdd7e4;
     color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 100px #03e9f4;
+    box-shadow: 0 0 5px#fdd7e4,
+                0 0 25px #7e587e,
+                0 0 50px #7e587e,
+                0 0 100px #7e587e;
   }
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  height: 3em;
+  padding: 0 4em 0 1em;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg) no-repeat right 0.8em center/1.4em, linear-gradient(to left, rgba(255, 255, 255, 0.3) 3em, rgba(255, 255, 255, 0.2) 3em);
+  color: white;
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+select option {
+  color: inherit;
+  background-color: #320a28;
+}
+select:focus {
+  outline: none;
+}
+select::-ms-expand {
+  display: none;
+}
+input [type="date"] {
+  background:black url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+}
+input [type="date"]::-webkit-inner-spin-button {
+  display: inline;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 100;
+  color:black;
+}
