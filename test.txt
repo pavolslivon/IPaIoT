@@ -1,6 +1,6 @@
-Meno: Laura Slivoňová
-Email: pavolslivon@gmail.com
-Subject: C#
-Deadline: 2022-11-03
-Link to assignment: asdasdasd
+Meno: 
+Email: 
+Subject: 
+Deadline: 
+Link to assignment: 
 Message: 
