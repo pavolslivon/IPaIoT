@@ -63,7 +63,14 @@
                 <textarea value="<?php echo $message; ?>" name="message"></textarea>
                 <label>Message</label>
             </div>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" onclick="myFunction(0)">
+            <script>
+                function myFunction(e) {
+                    if ((e && e.keyCode == 13) || e == 0) {
+                        alert("The form was submitted");
+                    }
+                }
+            </script>
         </form>
     </div>
 

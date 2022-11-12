@@ -1,6 +1,6 @@
-Meno: 
-Email: 
-Subject: 
-Deadline: 
-Link to assignment: 
-Message: 
+Meno: asdasd
+Email: pavolslivon@gmail.com
+Subject: C#
+Deadline: 2022-11-12
+Link to assignment: asd
+Message: asdasd
