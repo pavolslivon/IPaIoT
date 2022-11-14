@@ -63,6 +63,8 @@
                 <textarea value="<?php echo $message; ?>" name="message"></textarea>
                 <label>Message</label>
             </div>
+            <input type="text" name="url" required="" value="<?php echo $link; ?>">
+            <label>Link to assignment</label>
             <input type="submit" value="Submit" onsubmit="myFunction(0)" onerror="myFunction(0)">
             <script>
                 function myFunction(e) {
