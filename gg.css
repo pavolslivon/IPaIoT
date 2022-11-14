@@ -62,7 +62,7 @@ html {
 
   .login-box .user-box textarea:valid ~ label,
   .login-box .user-box textarea:focus ~ label
-  .login-box .user-box textarea:has ~ label,
+  .login-box .user-box textarea:empty ~ label,
   .login-box .user-box input:focus ~ label,
   .login-box .user-box input:valid ~ label {
     top: -20px;
