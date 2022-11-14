@@ -7,7 +7,6 @@
 
 <body>
     <?php
-    // define variables and set to empty values
     $name = $email = $subject = $date = $message = $link = "";
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = test_input($_POST["name"]);
@@ -63,7 +62,7 @@
                 <textarea value="<?php echo $message; ?>" name="message" required=""></textarea>
                 <label>Message</label>
             </div>
-            <input type="submit" value="Submit" onsubmit="myFunction(0)" onerror="myFunction(0)">
+            <input type="submit" value="Submit">
             <script>
                 function myFunction(e) {
                     if ((e && e.keyCode == 13) || e == 0) {
@@ -76,7 +75,7 @@
 
 </body>
 <?php
-$myfile = fopen("test.txt", "w") or die("Unable to open file!");
+$myfile = fopen("test.txt", "a+") or die("Unable to open file!");
 $name = "Meno: " . $name . "\n";
 $email = "Email: " . $email . "\n";
 $subject = "Subject: " . $subject . "\n";
