@@ -60,6 +60,7 @@ html {
     transition: .5s;
   }
 
+  .login-box .user-box textarea:valid ~ label,
   .login-box .user-box textarea:focus ~ label,
   .login-box .user-box input:focus ~ label,
   .login-box .user-box input:valid ~ label {

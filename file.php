@@ -63,7 +63,7 @@
                 <textarea value="<?php echo $message; ?>" name="message"></textarea>
                 <label>Message</label>
             </div>
-            <input type="submit" value="Submit" onsubmit="myFunction(0)">
+            <input type="submit" value="Submit" onsubmit="myFunction(0)" onerror="myFunction(0)">
             <script>
                 function myFunction(e) {
                     if ((e && e.keyCode == 13) || e == 0) {
