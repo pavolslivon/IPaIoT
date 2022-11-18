@@ -67,7 +67,7 @@
     </div>
 </body>
 <?php
-$myfile = fopen("test.txt", "w") or die("Unable to open file!");
+$myfile = fopen("test.txt", "a+") or die("Unable to open file!");
 $name = "Meno: " . $name . "\n";
 $email = "Email: " . $email . "\n";
 $subject = "Subject: " . $subject . "\n";
