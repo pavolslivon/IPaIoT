@@ -19,7 +19,7 @@
     ?>
     <div class="login-box">
         <h2>Contact Us</h2>
-        <form id="myform" method="post" autocomplete=off>
+        <form id="myform" method="post" autocomplete="off">
             <div class="user-box">
                 <input type="text" name="name" required="" value="<?php echo $name; ?>">
                 <label>Name</label>
