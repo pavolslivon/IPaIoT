@@ -5,29 +5,21 @@
 
 </head>
 
-<body>
+<body onload="myform.reset();">
     <?php
-    $name = $email = $subject = $date = $message = $link = "";
+    $name = $email = $subject = $date = $data = $message = $link = "";
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $name = test_input($_POST["name"]);
-        $email = test_input($_POST["email"]);
-        $subject = test_input($_POST["subject"]);
-        $date = test_input($_POST["date"]);
-        $link = test_input($_POST["url"]);
-        $message = test_input($_POST["message"]);
-    }
-
-    function test_input($data)
-    {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
+        $name = $_POST["name"];
+        $email = $_POST["email"];
+        $subject = $_POST["subject"];
+        $date = $_POST["date"];
+        $link = $_POST["url"];
+        $message = $_POST["message"];
     }
     ?>
     <div class="login-box">
         <h2>Contact Us</h2>
-        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        <form id="myform" method="post" autocomplete=off>
             <div class="user-box">
                 <input type="text" name="name" required="" value="<?php echo $name; ?>">
                 <label>Name</label>
@@ -63,28 +55,28 @@
                 <label>Message</label>
             </div>
             <input type="submit" value="Submit">
-            <?php
-            $myfile = fopen("test.txt", "w") or die("Unable to open file!");
-            $name = "Meno: " . $name . "\n";
-            $email = "Email: " . $email . "\n";
-            $subject = "Subject: " . $subject . "\n";
-            $date = "Deadline: " . $date . "\n";
-            $link = "Link to assignment: " . $link . "\n";
-            $message = "Message: " . $message . "\n";
-            fwrite($myfile, $name);
-            fwrite($myfile, $email);
-            fwrite($myfile, $subject);
-            fwrite($myfile, $date);
-            fwrite($myfile, $link);
-            fwrite($myfile, $message);
-            fclose($myfile);
-            $file3 = fopen("test.txt", "r") or die("Subor neexistuje");
-            $text3 = fread($file3, filesize("test.txt"));
-            echo $text3;
-            fclose($file3);
-            ?>
         </form>
     </div>
 </body>
+<?php
+$myfile = fopen("test.txt", "w") or die("Unable to open file!");
+$name = "Meno: " . $name . "\n";
+$email = "Email: " . $email . "\n";
+$subject = "Subject: " . $subject . "\n";
+$date = "Deadline: " . $date . "\n";
+$link = "Link to assignment: " . $link . "\n";
+$message = "Message: " . $message . "\n";
+fwrite($myfile, $name);
+fwrite($myfile, $email);
+fwrite($myfile, $subject);
+fwrite($myfile, $date);
+fwrite($myfile, $link);
+fwrite($myfile, $message);
+fclose($myfile);
+$file3 = fopen("test.txt", "r") or die("Subor neexistuje");
+$text3 = fread($file3, filesize("test.txt"));
+echo $text3;
+fclose($file3);
+?>
 
 </html>
