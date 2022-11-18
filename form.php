@@ -63,13 +63,6 @@
                 <label>Message</label>
             </div>
             <input type="submit" value="Submit">
-            <script>
-                function myFunction(e) {
-                    if ((e && e.keyCode == 13) || e == 0) {
-                        alert("The form was submitted");
-                    }
-                }
-            </script>
         </form>
     </div>
 </body>
