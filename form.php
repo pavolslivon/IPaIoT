@@ -72,10 +72,9 @@
             </script>
         </form>
     </div>
-    <h2>kokot</h2>
 </body>
 <?php
-$myfile = fopen("test.txt", "w");
+$myfile = fopen("test.txt", "w") or die("Unable to open file!");
 $name = "Meno: " . $name . "\n";
 $email = "Email: " . $email . "\n";
 $subject = "Subject: " . $subject . "\n";
