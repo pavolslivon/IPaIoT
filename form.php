@@ -73,10 +73,6 @@ fwrite($myfile, $date);
 fwrite($myfile, $link);
 fwrite($myfile, $message);
 fclose($myfile);
-$file3 = fopen("test.txt", "r") or die("Subor neexistuje");
-$text3 = fread($file3, filesize("test.txt"));
-echo $text3;
-fclose($file3);
 ?>
 
 </html>
