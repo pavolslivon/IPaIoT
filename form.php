@@ -88,6 +88,10 @@ fwrite($myfile, $date);
 fwrite($myfile, $link);
 fwrite($myfile, $message);
 fclose($myfile);
+$file2 = fopen("actuator.txt", "w") or die("Unable to open file!");
+$text2 = "Value from actuator. Save this value to actuator.txt";
+fwrite($file2, $text2);
+fclose($file2);
 ?>
 
 </html>
