@@ -81,17 +81,10 @@ fwrite($myfile, $date);
 fwrite($myfile, $link);
 fwrite($myfile, $message);
 fclose($myfile);
-<<<<<<< HEAD
 $file2 = fopen("actuator.txt", "w") or die("Unable to open file!");
 $text2 = "Value from actuator. Save this value to actuator.txt";
 fwrite($file2, $text2);
 fclose($file2);
-=======
-            $file2 = fopen("actuator.txt","w") or die("Unable to open file!");
-        $text2 = "Value from actuator. Save this value to actuator.txt";
-        fwrite($file2, $text2);
-        fclose($file2);
->>>>>>> 0c04ef3522d7ba2a7031afacbfe9f45635837730
 ?>
 
 </html>
